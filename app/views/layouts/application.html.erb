@@ -8,7 +8,13 @@
 </head>
 <body>
 
-<%= yield %>
+  <% unless flash.empty? %>
+    <% flash.each do |key, message| %>
+    <p class="flash #{key}"><%= message %></p>
+    <% end %>
+  <% end %>
 
+<%= yield %>
+<%= link_to "Home", categories_path %>
 </body>
 </html>

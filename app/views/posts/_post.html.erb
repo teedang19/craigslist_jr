@@ -1,1 +1,5 @@
-<li><%= link_to post.title, category_post_path(@category, post)%></li>
+<li>
+  <%= link_to post.title, category_post_path(@category, post)%>
+  (<%= link_to "Edit", edit_category_post_path(@category, post)%>)
+  (<%= link_to "Delete", category_post_path(@category, post), method: :delete, data: {confirm: "Are you totally sure?"} %>)
+</li>
