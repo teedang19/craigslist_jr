@@ -1,7 +1,5 @@
 <h1>All Categories:</h1>
 
 <ul>
-  <% @categories.each do |category| %>
-    <li><%= link_to category.title, category_posts_path(category) %></li>
-  <% end %>
+  <%= render partial: 'category', collection: @categories %>
 </ul>
