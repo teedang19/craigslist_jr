@@ -1,1 +1,5 @@
-<li><%= link_to category.title, category_posts_path(category) %>(<%= link_to 'Edit', edit_category_path(category) %>)(<%= link_to 'Delete', category_path(category), method: :delete, data: {confirm: 'Are you absolutely superly sure?'} %>)</li>
+<li>
+  <%= link_to category.title, category_posts_path(category) %>
+  (<%= link_to 'Edit', edit_category_path(category) %>)
+  (<%= link_to 'Delete', category_path(category), method: :delete, data: {confirm: 'Are you absolutely superly sure?'} %>)
+</li>
